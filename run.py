@@ -24,10 +24,7 @@ event = {
 def main(event):
     logging.info("Starting main process")
     event_data = event
-    logging.info(f"Event data parsed successfully: {event_data}")
-
     orchestrator(event_data)
-
 
 if __name__ == "__main__":
     start_time = time.time()
