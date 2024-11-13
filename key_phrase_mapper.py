@@ -164,9 +164,9 @@ def get_mapping(event, substandards, key_phrases, max_retries=5):
     for retry_count in range(max_retries):
         try:
             response = claude_client.messages.create(
-                model="claude-3-5-sonnet-20241022",
+                model=event.get("model"),
                 tools=[schema],
-                temperature=0,
+                temperature=event.get("temperature"),
                 messages=[{"role": "user", "content": user_message}],
                 max_tokens=8000,
             )
