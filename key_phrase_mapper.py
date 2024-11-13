@@ -383,24 +383,3 @@ def orchestrator(event):
             logging.info("Successfully wrote mappings to Google Sheet")
         except Exception as e:
             logging.error(f"Failed to write to Google Sheet: {str(e)}")
-
-if __name__ == "__main__":
-    """
-    Entry point for the script.
-    Expects event data to be passed as a JSON string via command-line arguments or environment variables.
-    """
-    # Example of how event data might be passed. Adjust according to your actual usage.
-    # Here, we're assuming event data is provided via a JSON file or environment variables.
-    # For simplicity, let's define a sample event dictionary.
-
-    event = {
-        "output_file_name": "1731522594",
-        "google_sheet": {
-            "credentials_file": "service_account.json",
-            "spreadsheet_id": "1iZ-ELOusplmfvcdVAttV5HAZhTFVzzNrXp69of_aWYc",
-            "input_sheet_name": "Inputs",
-            "output_sheet_name": "Outputs"
-        }
-    }
-
-    orchestrator(event)
