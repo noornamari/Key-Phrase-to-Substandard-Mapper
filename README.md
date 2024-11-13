@@ -1,5 +1,5 @@
 # Key Phrases to Substandards Mapping Tool
-### Disclaimer: This tool uses an Anthropic prompt. 
+Disclaimer: This tool uses an Anthropic prompt. You can change the model and the temperature in the event in run.py and the user prompt in key_phrase_mapper.py, but I found that the settings I'm using work very well. 
 
 ## Steps:
 ## 1. Make a copy of this [Key Phrase Mapping Template sheet](https://docs.google.com/spreadsheets/d/1eKBtM7s35TVFJ5bbl6TlhSuH4oyAr9Vg6nHmzBV3SUs/edit?gid=0#gid=0). 
@@ -12,7 +12,9 @@ Note the email that is created (the google sheet needs to give edit access to th
 Update the event with your claude API key, the path to your service account credentials, and your spreadsheet id. 
 
 ## 4. Add your learning objective, substandards, and key phrases inputs to your spreadsheet and execute run.py
-The outputs will be pushed to the google sheet's "Outputs" tab. The outputs include the model's thinking process for the mapping, the dictionary of the mappings, the number of key phrases associated with the learning objective, the number of key phrases mapped, and if all of the key phrases that are mapped are only used once (i.e., are they unique?).
+The outputs will be pushed to the google sheet's "Outputs" tab. The outputs include the model's thinking process for the mapping, the dictionary of the mappings, the number of key phrases associated with the learning objective, the number of key phrases mapped, and if all of the key phrases that are mapped are only used once (i.e., are they unique?). 
+
+The outputs will also be saved locally to a csv file in a subdirectory called "outputs."
 
 ## 5. Execute the google AppsScript function "Format Mappings." 
 This will output each substandard to a row in the sheet "Key Phrases Mapped to Substandards, "with each of the substandard's mapped key phrases in their own column.
