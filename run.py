@@ -10,6 +10,8 @@ logging.basicConfig(
 event = {
     "output_file_name": f"{int(time.time())}",
     "claude_api_key": "--your api-key--",
+    "model": "claude-3-5-sonnet-20241022",
+    "temperature": 0,
     "google_sheet": {
         "credentials_file": "--your service account credentials json file--",
         "spreadsheet_id": "--your spreadsheet id--",
