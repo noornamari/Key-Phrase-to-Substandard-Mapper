@@ -22,7 +22,6 @@ event = {
 
 
 def main(event):
-    logging.info("Starting main process")
     event_data = event
     orchestrator(event_data)
 
