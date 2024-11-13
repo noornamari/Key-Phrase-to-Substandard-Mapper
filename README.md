@@ -8,7 +8,9 @@ This is where you'll add the key phrases and substandards associated with the L1
 ## 2. [Set up a google cloud service account.](https://cloud.google.com/iam/docs/service-accounts-create#creating) 
 Note the email that is created (the google sheet needs to give edit access to this email). Then, get the service account key in JSON by going to "Manage Keys" and "Create a new key." The JSON file that has the key needs to be added to the folder that has the run.py script. 
 
-## 3. Update the event dictionary in run.py.
+## 3. Install the requirements and update the event dictionary in run.py.
+Install the requirements by running: pip install -r requirements.txt
+
 Update the event with your claude API key, the path to your service account credentials, and your spreadsheet id. 
 
 ## 4. Add your learning objective, substandards, and key phrases inputs to your spreadsheet and execute run.py
