@@ -31,16 +31,6 @@ def setup_google_sheet(credentials_file, spreadsheet_id, sheet_name):
     sheet = client.open_by_key(spreadsheet_id).worksheet(sheet_name)
     return sheet
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(sys.stdout),
-        logging.FileHandler("key_phrase_mapper.log", encoding='utf-8')
-    ]
-)
-
 # Define the schema for the Anthropic API tool use
 schema = {
     "name": "getSubstandardKeyPhrases",
